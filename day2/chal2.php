@@ -4,6 +4,7 @@ require __DIR__ . "/vendor/autoload.php";
 
 function mi5($str) {
     return preg_match("/00[0-9]/", $str) === 1;
+    // "/0{2}\d/" - another way of writing it
 }
 
 dump(mi5("007")); // true
