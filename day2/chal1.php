@@ -3,7 +3,7 @@
 require __DIR__ . "/vendor/autoload.php";
 
 function hasNumber($str) {
-    return preg_match("/\d/", $str) === 1;
+    return preg_match("/[0-9]/", $str) === 1;
 }
 
 dump(hasNumber("blah")); // false
