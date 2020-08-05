@@ -17,9 +17,9 @@ class StringyRedux
         return $this;
     }
 
-    public function repeat($string)
+    public function repeat($number)
     {
-        $this->string = str_repeat($this->string, $string);
+        $this->string = str_repeat($this->string, $number);
         return $this;
     }
 
