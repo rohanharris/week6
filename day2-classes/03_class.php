@@ -37,6 +37,7 @@ class Car
     public function addJourney($value)
     {
         $this->mileage += $value;
+        return $this->mileage;
     }   
 
 }
