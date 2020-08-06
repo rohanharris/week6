@@ -1,5 +1,5 @@
 <?php
-
+declare(strict_types=1);
 require __DIR__ . "/vendor/autoload.php";
 
 class Wombat
@@ -12,24 +12,24 @@ class Wombat
         $this->name = $name;
     }
 
-    public function getName()
+    public function getName() 
     {
         return $this->name;
     }
 
-    public function sayHelloTo($wombat)
+    public function sayHelloTo(Wombat $wombat) :string
     {
         return "Hello, {$wombat->getName()}";
     }
 
-    public function giveHug()
+    public function giveHug() : Wombat
     {
         $this->hugs += 1;
         return $this;
     }
 
 
-    public function howManyHugs()
+    public function howManyHugs() : int
     {
         return $this->hugs;
     }

@@ -1,5 +1,9 @@
 <?php
+declare(strict_types=1);
 require __DIR__ . "/vendor/autoload.php";
+
+
+// NEED TO FINISH 
 
 class Address 
 {
@@ -17,19 +21,19 @@ class Address
             
     }
 
-    public function setStreet($name)
+    public function setStreet(string $name) : string
     {
         $this->street = $name;
         return $this->street;
     }
 
-    public function setTown($name)
+    public function setTown(string $name) : string
     {
         $this->town = $name;
         return $this->town;
     }
 
-    public function setPostcode($name)
+    public function setPostcode(string $name) : string
     {
         $this->postcode = $name;
         return $this->postcode;

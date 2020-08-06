@@ -13,11 +13,13 @@ class BasketItem
         $this->cost = $cost;
     }
 
-    public function getItem(){
+    public function getItem() : string
+    {
         return $this->item;
     }
 
-    public function getCost(){
+    public function getCost() : float
+    {
         return $this->cost;
     }
 
@@ -30,24 +32,24 @@ class Basket
     private $total = 0;
     private $items = [];
 
-    public function add($basket)
+    public function add(BasketItem $basket) : void
     {
         $this->basket[] = $basket;
     }
 
-    public function total()
+    public function total() : string
     {
-        foreach($this->basket as $basket)
-        {
-            $total += $basket->getCost();
+       foreach($this->basket as $basket)
+        {  
+            $this->total += $basket->getCost();
 
         }
 
-        return "£" . number_format($total,2);
+        return "£" . number_format($this->total,2);
     
     }
 
-    public function items()
+    public function items() : array
     {
         foreach ($this->basket as $basket)
         {

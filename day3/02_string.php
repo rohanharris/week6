@@ -11,31 +11,31 @@ class StringyRedux
         $this->string = $string;
     }
 
-    public function lower()
+    public function lower() : StringyRedux
     {
         $this->string = strtolower($this->string);
         return $this;
     }
 
-    public function repeat($number)
+    public function repeat(int $number) : StringyRedux
     {
         $this->string = str_repeat($this->string, $number);
         return $this;
     }
 
-    public function upper()
+    public function upper() :StringyRedux
     {
         $this->string = strtoupper($this->string);
         return $this;
     }
 
-    public function append($string)
+    public function append(string $string) : StringyRedux
     {
         $this->string .= $string;
         return $this;
     }
 
-    public function get()
+    public function get() : string
     {
         return $this->string;
     }
